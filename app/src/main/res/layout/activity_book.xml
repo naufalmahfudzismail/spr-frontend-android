@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".BookActivity">
+
+    <fr.arnaudguyon.smartfontslib.FontTextView
+        android:textAlignment="center"
+        android:id="@+id/title"
+        android:text="Cari Ruangan"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="98dp">
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:textAlignment="center"
+            android:id="@+id/txt_ruang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Ruangan"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spn_room"
+            android:layout_width="178dp"
+            android:layout_height="68dp"
+            android:layout_toEndOf="@+id/txt_ruang"
+            android:padding="20dp"
+            android:text="AA301" />
+
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/in_date"
+            android:layout_marginTop="82dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT DATE"
+            android:id="@+id/btn_date"
+            android:layout_alignBottom="@+id/in_date"
+            android:layout_toRightOf="@+id/in_date"
+            android:layout_toEndOf="@+id/in_date"
+            tools:ignore="RtlHardcoded" />
+
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/in_time"
+            android:layout_below="@+id/in_date"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="RtlHardcoded" />
+
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT TIME"
+            android:id="@+id/btn_time"
+            android:layout_below="@+id/btn_date"
+            android:layout_alignLeft="@+id/btn_date"
+            android:layout_alignStart="@+id/btn_date"
+            tools:ignore="RtlHardcoded" />
+
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_time"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="20dp"
+            android:text="Cari" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
