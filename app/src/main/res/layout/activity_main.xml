@@ -4,49 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        android:layout_height="match_parent">
+        android:fitsSystemWindows="true">
     </android.support.design.widget.NavigationView>
 
-    <LinearLayout
-        android:padding="20dp"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <fr.arnaudguyon.smartfontslib.FontTextView
-        android:fontFamily="casual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lantai 3"/>
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Ruangan Gedung AA" />
 
-    <android.support.v7.widget.RecyclerView
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_rcy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_title"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+        </android.support.v7.widget.RecyclerView>
 
-    <fr.arnaudguyon.smartfontslib.FontTextView
-        android:fontFamily="casual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lantai 4"/>
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/txt_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_rcy"
+            android:text="Cari ruangan berdasarkan tanggal dan waktu peminjaman"
+            android:textAlignment="center" />
 
-    <android.support.v7.widget.RecyclerView
-        android:paddingTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
-
-    </LinearLayout>
-
-
-
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:id="@+id/btn_cari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_hint"
+            android:layout_centerHorizontal="true"
+            android:text="Cari Ruangan" />
+    </RelativeLayout>
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>

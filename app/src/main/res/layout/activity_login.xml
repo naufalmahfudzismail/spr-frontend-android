@@ -12,9 +12,19 @@
     tools:context=".LoginActivity">
 
     <fr.arnaudguyon.smartfontslib.FontTextView
+        android:padding="20dp"
+        android:textSize="30sp"
+        android:id="@+id/txt_log_role"
+        android:textAlignment="center"
+        android:text="Login Mahasiswa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fr.arnaudguyon.smartfontslib.FontTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NIM atau NIP"
+        android:id="@+id/txt_nim"
+        android:text="NIM"
         android:textSize="24sp" />
 
     <fr.arnaudguyon.smartfontslib.FontEditText
@@ -41,5 +51,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Login" />
+
+    <fr.arnaudguyon.smartfontslib.FontButton
+        android:id="@+id/btn_change"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:text="Sebagai dosen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
