@@ -21,8 +21,9 @@
         android:padding="20dp">
 
         <fr.arnaudguyon.smartfontslib.FontTextView
+            android:textAlignment="center"
             android:id="@+id/txt_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="Ruangan Gedung AA" />
@@ -31,7 +32,7 @@
             android:id="@+id/list_rcy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_title"
+            android:layout_below="@+id/btn_cari"
             android:paddingTop="20dp"
             android:paddingBottom="20dp">
         </android.support.v7.widget.RecyclerView>
@@ -40,7 +41,7 @@
             android:id="@+id/txt_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/list_rcy"
+            android:layout_below="@+id/txt_title"
             android:text="Cari ruangan berdasarkan tanggal dan waktu peminjaman"
             android:textAlignment="center" />
 
@@ -48,8 +49,9 @@
             android:id="@+id/btn_cari"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_hint"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="108dp"
+            android:layout_below="@+id/txt_hint"
             android:text="Cari Ruangan" />
     </RelativeLayout>
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>

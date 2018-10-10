@@ -10,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.naufa.myapplication.BookActivity;
 import com.example.naufa.myapplication.Dataset;
 import com.example.naufa.myapplication.DetailActivity;
+import com.example.naufa.myapplication.Entity.Peminjaman;
 import com.example.naufa.myapplication.Entity.Ruangan;
 import com.example.naufa.myapplication.R;
 
@@ -21,12 +23,12 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ListRoomAdapter extends RecyclerView.Adapter<ListRoomAdapter.RoomHolder>
+public class ResultRoomAdapter extends RecyclerView.Adapter<ResultRoomAdapter.RoomListHolder>
 {
     private List<Ruangan> ruanganList;
     private Context context;
 
-    public ListRoomAdapter(List<Ruangan> ruanganList, Context context)
+    public ResultRoomAdapter(List<Ruangan> ruanganList, Context context)
     {
         this.ruanganList = ruanganList;
         this.context = context;
@@ -34,14 +36,14 @@ public class ListRoomAdapter extends RecyclerView.Adapter<ListRoomAdapter.RoomHo
 
     @NonNull
     @Override
-    public RoomHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i)
+    public ResultRoomAdapter.RoomListHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i)
     {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_room, viewGroup, false);
-        return new RoomHolder(view);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_result_room, viewGroup, false);
+        return new ResultRoomAdapter.RoomListHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RoomHolder roomHolder, int i)
+    public void onBindViewHolder(@NonNull ResultRoomAdapter.RoomListHolder roomHolder, int i)
     {
         final Ruangan ruangan = ruanganList.get(i);
 
@@ -52,7 +54,7 @@ public class ListRoomAdapter extends RecyclerView.Adapter<ListRoomAdapter.RoomHo
             public void onClick(View v)
             {
                 Dataset.ruangan = ruangan;
-                Intent intent = new Intent(context, DetailActivity.class);
+                Intent intent = new Intent(context, BookActivity.class);
                 context.startActivity(intent);
             }
         });
@@ -64,15 +66,15 @@ public class ListRoomAdapter extends RecyclerView.Adapter<ListRoomAdapter.RoomHo
         return ruanganList.size();
     }
 
-    class RoomHolder extends RecyclerView.ViewHolder
+    class RoomListHolder extends RecyclerView.ViewHolder
     {
-        @BindView(R.id.txt_name_room)
+        @BindView(R.id.txt_name_room_result)
         TextView txt_room;
 
-        @BindView(R.id.btn_room)
+        @BindView(R.id.btn_room_result)
         Button btn_room;
 
-        RoomHolder(@NonNull View itemView)
+        RoomListHolder(@NonNull View itemView)
         {
             super(itemView);
             ButterKnife.bind(this, itemView);

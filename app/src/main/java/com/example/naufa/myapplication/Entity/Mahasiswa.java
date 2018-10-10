@@ -4,13 +4,13 @@ public class Mahasiswa
 {
     private String nim;
     private String nama;
-    private String kd_kelas;
+    private String nama_ruangan;
 
-    public Mahasiswa(String nim, String nama, String kd_kelas)
+    public Mahasiswa(String nim, String nama, String nama_ruangan)
     {
         this.nim = nim;
         this.nama = nama;
-        this.kd_kelas = kd_kelas;
+        this.nama_ruangan = nama_ruangan;
     }
 
     public String getNim()
@@ -35,11 +35,11 @@ public class Mahasiswa
 
     public String getKd_kelas()
     {
-        return kd_kelas;
+        return nama_ruangan;
     }
 
-    public void setKd_kelas(String kd_kelas)
+    public void setKd_kelas(String nama_ruangan)
     {
-        this.kd_kelas = kd_kelas;
+        this.nama_ruangan = nama_ruangan;
     }
 }

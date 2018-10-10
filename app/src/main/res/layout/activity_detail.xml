@@ -8,14 +8,24 @@
     tools:context=".DetailActivity">
 
     <fr.arnaudguyon.smartfontslib.FontTextView
+        android:id="@+id/txt_detail_room"
+        android:padding="20dp"
         android:layout_gravity="center"
         android:textSize="30sp"
-        android:fontFamily="casual"
+        android:fontFamily="Times new roman"
         android:text="AA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:text="Pinjam"
+        android:layout_gravity="center"
+        android:id="@+id/btn_detail_pinjam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -27,8 +37,9 @@
     </android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
+        android:id="@+id/vp_detail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
     </android.support.v4.view.ViewPager>
 </LinearLayout>

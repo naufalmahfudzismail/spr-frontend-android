@@ -1,7 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/wrapperCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/txt_jadwal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginEnd="30dp"
+            android:text="Pengantar Algoritma dan Pemograman"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+
+            android:id="@+id/txt_jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jadwal_name"
+            android:layout_marginTop="2dp"
+            android:text="08.00 - 10.30"
+            android:textSize="20sp"/>
+
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+
+            android:id="@+id/txt_ruangan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jam"
+            android:layout_marginTop="2dp"
+            android:text="AA301"
+            android:textSize="20sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/spasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jam"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/txt_ruangan_name"
+            android:textSize="12sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/txt_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jam"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/spasi"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Dr.Geraldi Joni STr., MI."
+            android:textSize="20sp" />
+
+    </RelativeLayout>
 
     
 </android.support.v7.widget.CardView>

@@ -6,19 +6,54 @@ public class Jadwal
     private String kd_dosen;
     private String hari;
     private String date;
+    private String startDate;
     private String endDate;
-    private String kd_kelas;
-    private String kd_ruangan;
+    private String nama_ruangan;
 
-    public Jadwal(String kd_jadwal, String kd_dosen, String hari, String date, String endDate, String kd_kelas, String kd_ruangan)
+    public String getNama_ruangan()
+    {
+        return nama_ruangan;
+    }
+
+    public void setNama_ruangan(String nama_ruangan)
+    {
+        this.nama_ruangan = nama_ruangan;
+    }
+
+    private String kd_ruangan;
+    private String nama_jadwal;
+
+    public Jadwal(String kd_jadwal, String kd_dosen, String hari, String startDate, String endDate, String nama_ruangan, String kd_ruangan, String nama_jadwal, String Date)
     {
         this.kd_jadwal = kd_jadwal;
         this.kd_dosen = kd_dosen;
         this.hari = hari;
-        this.date = date;
+        this.startDate = startDate;
         this.endDate = endDate;
-        this.kd_kelas = kd_kelas;
+        this.nama_ruangan = nama_ruangan;
         this.kd_ruangan = kd_ruangan;
+        this.nama_jadwal = nama_jadwal;
+        this.date =  Date;
+    }
+
+    public String getStartDate()
+    {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate)
+    {
+        this.startDate = startDate;
+    }
+
+    public String getNama_jadwal()
+    {
+        return nama_jadwal;
+    }
+
+    public void setNama_jadwal(String nama_jadwal)
+    {
+        this.nama_jadwal = nama_jadwal;
     }
 
     public String getKd_jadwal()
@@ -73,12 +108,12 @@ public class Jadwal
 
     public String getKd_kelas()
     {
-        return kd_kelas;
+        return nama_ruangan;
     }
 
-    public void setKd_kelas(String kd_kelas)
+    public void setKd_kelas(String nama_ruangan)
     {
-        this.kd_kelas = kd_kelas;
+        this.nama_ruangan = nama_ruangan;
     }
 
     public String getKd_ruangan()

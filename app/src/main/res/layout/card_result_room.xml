@@ -13,15 +13,15 @@
         <fr.arnaudguyon.smartfontslib.FontTextView
             android:gravity="center"
             android:text="AA305"
-            android:id="@+id/txt_name_room"
+            android:id="@+id/txt_name_room_result"
             android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
         <fr.arnaudguyon.smartfontslib.FontButton
-            android:text="Lihat"
-            android:id="@+id/btn_room"
-            android:layout_below="@+id/txt_name_room"
+            android:text="Pinjam"
+            android:id="@+id/btn_room_result"
+            android:layout_below="@+id/txt_name_room_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

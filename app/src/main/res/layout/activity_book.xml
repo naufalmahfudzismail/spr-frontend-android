@@ -1,13 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".BookActivity">
 
-    <TextView
+    <fr.arnaudguyon.smartfontslib.FontTextView
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Peminjaman"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:gravity="center"
+            android:id="@+id/txt_room"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="Ruangan :"
+            android:textSize="15sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:enabled="false"
+            android:id="@+id/edt_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_room"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:id="@+id/btn_date_book"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:textSize="15sp" />
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:id="@+id/edt_date_book"
+            android:layout_toRightOf="@+id/btn_date_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:textSize="14sp"
+            android:id="@+id/btn_time_start_book"
+            android:text="Jam Mulai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:id="@+id/edt_start_time_book"
+            android:layout_toRightOf="@+id/btn_time_start_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:textSize="14sp"
+            android:id="@+id/btn_time_end_book"
+            android:text="Jam Akhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:id="@+id/edt_end_time_book"
+            android:layout_toRightOf="@+id/btn_time_end_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:gravity="center"
+            android:id="@+id/txt_ket"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Keterangan"
+            android:textSize="15sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontEditText
+            android:id="@+id/edt_ket"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_ket"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <fr.arnaudguyon.smartfontslib.FontButton
+        android:id="@+id/btn_pinjam"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Pinjam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

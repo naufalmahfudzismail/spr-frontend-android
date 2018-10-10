@@ -3,6 +3,7 @@ package com.example.naufa.myapplication;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,6 +45,9 @@ public class CariActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.btn_end_time)
     Button btn_end_time;
 
+    @BindView(R.id.btn_cari)
+    Button btn_cari;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -54,6 +58,8 @@ public class CariActivity extends AppCompatActivity implements View.OnClickListe
         btn_date.setOnClickListener(this);
         btn_time.setOnClickListener(this);
         btn_end_time.setOnClickListener(this);
+        btn_cari.setOnClickListener(this);
+
     }
 
     @Override
@@ -137,7 +143,11 @@ public class CariActivity extends AppCompatActivity implements View.OnClickListe
 
         else
         {
-
+            Dataset.Date = date;
+            Dataset.S_time = startTime;
+            Dataset.E_time = endTime;
+            Intent intent = new Intent(this, ResultActivity.class);
+            startActivity(intent);
         }
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Kelas
 {
-    private String kd_kelas;
+    private String nama_ruangan;
     private List<Mahasiswa> mahasiswaList = new ArrayList<>();
     private String nama_kelas;
 
@@ -15,12 +15,12 @@ public class Kelas
 
     public String getKd_kelas()
     {
-        return kd_kelas;
+        return nama_ruangan;
     }
 
-    public void setKd_kelas(String kd_kelas)
+    public void setKd_kelas(String nama_ruangan)
     {
-        this.kd_kelas = kd_kelas;
+        this.nama_ruangan = nama_ruangan;
     }
 
     public List<Mahasiswa> getMahasiswaList()
