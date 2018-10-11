@@ -83,7 +83,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth)
                 {
-                    edt_date_book.setText(dayOfMonth + "-" + (month + 1) + "-" + year);
+                    edt_date_book.setText(year + "-" + (month + 1) + "-" + dayOfMonth);
                 }
             }, mYear, mMonth, mDay);
             datePickerDialog.show();

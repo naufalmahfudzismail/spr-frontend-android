@@ -46,13 +46,14 @@ public class Kamis extends Fragment
 
     private void getData()
     {
+        jadwalList.clear();
         int size = Dataset.jadwalList.size();
         String ruangan = Dataset.ruangan.getNama_ruangan();
 
         for (int i = 0; i < size; i++)
         {
             String hari = Dataset.jadwalList.get(i).getHari();
-            String ruang = Dataset.jadwalList.get(i).getKd_ruangan();
+            String ruang = Dataset.jadwalList.get(i).getNama_ruangan();
 
             if (hari.equals(day) && ruang.equals(ruangan))
             {
@@ -62,6 +63,5 @@ public class Kamis extends Fragment
 
         jadwalAdapter = new JadwalAdapter(jadwalList);
         recyclerView.setAdapter(jadwalAdapter);
-
     }
 }

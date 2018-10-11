@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private  boolean isDosen = false;
     private int counter = 1;
+    private static String TAG = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -161,6 +163,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     "11:00", "AA301", "3", "Web 2", "19-10-2018" );
         Dataset.jadwalList.add(jadwal9);
 
+        for ( int i = 0; i < Dataset.jadwalList.size(); i++)
+        {
+            Log.d(TAG, Dataset.jadwalList.get(i).getNama_ruangan());
+
+        }
 
         /*Jadwal jadwal10 = new Jadwal("11", "Pedro","Senin", "07:30",
                                      "11:00", "AA301", "3", "Web 2" );

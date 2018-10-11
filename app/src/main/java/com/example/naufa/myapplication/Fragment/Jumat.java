@@ -1,7 +1,6 @@
 package com.example.naufa.myapplication.Fragment;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -31,6 +30,7 @@ public class Jumat extends Fragment
     private JadwalAdapter jadwalAdapter;
     private List<Jadwal> jadwalList = new ArrayList<>();
     private static String day = "Jumat";
+    private static String TAG = "Jumat";
 
 
 
@@ -48,6 +48,7 @@ public class Jumat extends Fragment
 
     private void getData()
     {
+        jadwalList.clear();
         int size = Dataset.jadwalList.size();
         String ruangan = Dataset.ruangan.getNama_ruangan();
 
@@ -55,7 +56,7 @@ public class Jumat extends Fragment
         for( int i = 0; i < size; i++)
         {
             String hari = Dataset.jadwalList.get(i).getHari();
-            String ruang = Dataset.jadwalList.get(i).getKd_ruangan();
+            String ruang = Dataset.jadwalList.get(i).getNama_ruangan();
 
             if(hari.equals(day) && ruang.equals(ruangan))
             {

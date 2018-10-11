@@ -15,7 +15,7 @@
             android:id="@+id/txt_jadwal_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginEnd="30dp"
             android:text="Pengantar Algoritma dan Pemograman"
             android:textColor="@color/colorPrimaryDark"/>
@@ -28,7 +28,7 @@
             android:layout_below="@id/txt_jadwal_name"
             android:layout_marginTop="2dp"
             android:text="08.00 - 10.30"
-            android:textSize="20sp"/>
+            android:textSize="14sp"/>
 
 
         <fr.arnaudguyon.smartfontslib.FontTextView
@@ -39,7 +39,7 @@
             android:layout_below="@id/txt_jam"
             android:layout_marginTop="2dp"
             android:text="AA301"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <fr.arnaudguyon.smartfontslib.FontTextView
             android:id="@+id/spasi"
@@ -63,7 +63,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="Dr.Geraldi Joni STr., MI."
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
     </RelativeLayout>
 

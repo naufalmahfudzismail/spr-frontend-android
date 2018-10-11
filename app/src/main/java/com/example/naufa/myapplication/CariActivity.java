@@ -71,7 +71,7 @@ public class CariActivity extends AppCompatActivity implements View.OnClickListe
             final Calendar c = Calendar.getInstance();
             int mYear = c.get(Calendar.YEAR);
             int mMonth = c.get(Calendar.MONTH);
-            int mDay = c.get(Calendar.DAY_OF_MONTH);
+            final int mDay = c.get(Calendar.DAY_OF_MONTH);
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener()
             {
@@ -79,7 +79,7 @@ public class CariActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth)
                 {
-                    in_date.setText(dayOfMonth + "-" + (month + 1) + "-" + year);
+                    in_date.setText(year + "-" + (month + 1) + "-" + dayOfMonth);
                 }
             }, mYear, mMonth, mDay);
             datePickerDialog.show();

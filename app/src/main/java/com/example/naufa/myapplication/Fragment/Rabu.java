@@ -46,6 +46,7 @@ public class Rabu extends Fragment
 
     private void getData()
     {
+        jadwalList.clear();
         int size = Dataset.jadwalList.size();
         String ruangan = Dataset.ruangan.getNama_ruangan();
 
