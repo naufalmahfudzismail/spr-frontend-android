@@ -97,12 +97,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 isDosen = true;
                 txt_log_role.setText("Login Dosen");
                 txt_nim.setText("NIP");
+                btn_change.setText("Login sebagai Mahasiswa");
             }
             else
             {
                 isDosen = false;
                 txt_log_role.setText("Login Mahasiswa");
                 txt_nim.setText("NIM");
+                btn_change.setText("Login sebagai Dosen");
             }
         }
     }
