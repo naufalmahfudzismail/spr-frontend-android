@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/wrapperCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:layout_marginBottom="5dp"
+            android:id="@+id/txt_jadwal_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="Algoritma dan Pemograman"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+
+            android:id="@+id/txt_jam_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jadwal_dosen"
+            android:layout_marginTop="2dp"
+            android:text="08.00 - 10.30"
+            android:textSize="14sp" />
+
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+
+            android:id="@+id/txt_ruangan_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jam_dosen"
+            android:layout_marginTop="2dp"
+            android:text="AA301"
+            android:textSize="14sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/spasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_dosen"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/txt_ruangan_dosen"
+            android:textSize="12sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontTextView
+            android:id="@+id/txt_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_jam_dosen"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@id/spasi"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Dr.Geraldi Joni STr., MI."
+            android:textSize="14sp" />
+
+        <fr.arnaudguyon.smartfontslib.FontButton
+            android:id="@+id/btn_edt_jadwal"
+            android:layout_width="109dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_jam_dosen"
+            android:layout_toEndOf="@+id/txt_kelas"
+            android:text="Edit" />
+
+    </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>

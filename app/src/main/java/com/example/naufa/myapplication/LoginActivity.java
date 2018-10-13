@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @BindView(R.id.btn_change)
     Button btn_change;
 
-    private  boolean isDosen = false;
     private int counter = 1;
     private static String TAG = "LoginActivity";
 
@@ -75,33 +74,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v)
     {
-        int id  = v.getId();
-        if(id == R.id.btn_login)
+        int id = v.getId();
+        if (id == R.id.btn_login)
         {
-            if(isDosen)
+            if (Dataset.isDosen)
             {
                 loginDosen();
-            }
-            else
+            } else
             {
                 loginMhsw();
             }
         }
 
-        if( id == R.id.btn_change)
+        if (id == R.id.btn_change)
         {
-            counter ++;
+            counter++;
 
-            if(counter % 2 == 0)
+            if (counter % 2 == 0)
             {
-                isDosen = true;
+                Dataset.isDosen = true;
                 txt_log_role.setText("Login Dosen");
                 txt_nim.setText("NIP");
                 btn_change.setText("Login sebagai Mahasiswa");
-            }
-            else
+            } else
             {
-                isDosen = false;
+                Dataset.isDosen = false;
                 txt_log_role.setText("Login Mahasiswa");
                 txt_nim.setText("NIM");
                 btn_change.setText("Login sebagai Dosen");
@@ -111,7 +108,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void getData()
     {
-        Ruangan ruangan = new Ruangan("1", "AA204", "available" );
+        Ruangan ruangan = new Ruangan("1", "AA204", "available");
         Dataset.ruanganList.add(ruangan);
         Ruangan ruangan1 = new Ruangan("2", "AA205", "Available");
         Dataset.ruanganList.add(ruangan1);
@@ -127,45 +124,55 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Dataset.ruanganList.add(ruangan6);
 
         Jadwal jadwal = new Jadwal("1", "Pedro", "Senin", "07:30",
-                                   "11:00", "AA301", "3", "Web 2", "15-10-2018" );
+                                   "11:00", "AA301", "3", "Web 2", "15-10-2018"
+        );
         Dataset.jadwalList.add(jadwal);
 
-        Jadwal jadwal1 = new Jadwal("2", "Pedrosa","Selasa", "07:30",
-                                    "11:00", "AA302", "4", "Web 2", "16-10-2018" );
+        Jadwal jadwal1 = new Jadwal("2", "Pedrosa", "Selasa", "07:30",
+                                    "11:00", "AA302", "4", "Web 2", "16-10-2018"
+        );
         Dataset.jadwalList.add(jadwal1);
 
-        Jadwal jadwal2 = new Jadwal("3", "Pedrosi","Rabu", "07:30",
-                                    "11:00", "AA303", "5", "Web 2", "17-10-2018" );
+        Jadwal jadwal2 = new Jadwal("3", "Pedrosi", "Rabu", "07:30",
+                                    "11:00", "AA303", "5", "Web 2", "17-10-2018"
+        );
         Dataset.jadwalList.add(jadwal2);
-        Jadwal jadwal3 = new Jadwal("4", "Pedrosu","Kamis", "07:30",
-                                    "11:00", "AA304", "6", "Web 2", "18-10-2018" );
+        Jadwal jadwal3 = new Jadwal("4", "Pedrosu", "Kamis", "07:30",
+                                    "11:00", "AA304", "6", "Web 2", "18-10-2018"
+        );
         Dataset.jadwalList.add(jadwal3);
 
-        Jadwal jadwal4 = new Jadwal("5", "Pedrosy","Jumat", "07:30",
-                                    "11:00", "AA305", "7", "Web 2", "19-10-2018" );
+        Jadwal jadwal4 = new Jadwal("5", "Pedrosy", "Jumat", "07:30",
+                                    "11:00", "AA305", "7", "Web 2", "19-10-2018"
+        );
         Dataset.jadwalList.add(jadwal4);
 
-        Jadwal jadwal5 = new Jadwal("6", "Pedrosya","Senin", "07:30",
-                                    "11:00", "AA305", "7", "Web 2", "15-10-2018" );
+        Jadwal jadwal5 = new Jadwal("6", "Pedrosya", "Senin", "07:30",
+                                    "11:00", "AA305", "7", "Web 2", "15-10-2018"
+        );
         Dataset.jadwalList.add(jadwal5);
 
-        Jadwal jadwal6 = new Jadwal("7", "Pedrosaw","Selasa", "07:30",
-                                    "11:00", "AA304", "6", "Web 2", "16-10-2018" );
+        Jadwal jadwal6 = new Jadwal("7", "Pedrosaw", "Selasa", "07:30",
+                                    "11:00", "AA304", "6", "Web 2", "16-10-2018"
+        );
         Dataset.jadwalList.add(jadwal6);
 
-        Jadwal jadwal7 = new Jadwal("8", "Pedrosi","Rabu", "07:30",
-                                    "11:00", "AA303", "5", "Web 2", "17-10-2018" );
+        Jadwal jadwal7 = new Jadwal("8", "Pedrosi", "Rabu", "07:30",
+                                    "11:00", "AA303", "5", "Web 2", "17-10-2018"
+        );
         Dataset.jadwalList.add(jadwal7);
 
-        Jadwal jadwal8 = new Jadwal("9", "Pedrode","Kamis", "07:30",
-                                    "11:00", "AA302", "4", "Web 2", "18-10-2018" );
+        Jadwal jadwal8 = new Jadwal("9", "Pedrode", "Kamis", "07:30",
+                                    "11:00", "AA302", "4", "Web 2", "18-10-2018"
+        );
         Dataset.jadwalList.add(jadwal8);
 
-        Jadwal jadwal9 = new Jadwal("10", "Pedroyan","Jumat", "07:30",
-                                    "11:00", "AA301", "3", "Web 2", "19-10-2018" );
+        Jadwal jadwal9 = new Jadwal("10", "Pedroyan", "Jumat", "07:30",
+                                    "11:00", "AA301", "3", "Web 2", "19-10-2018"
+        );
         Dataset.jadwalList.add(jadwal9);
 
-        for ( int i = 0; i < Dataset.jadwalList.size(); i++)
+        for (int i = 0; i < Dataset.jadwalList.size(); i++)
         {
             Log.d(TAG, Dataset.jadwalList.get(i).getNama_ruangan());
 

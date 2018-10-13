@@ -13,6 +13,7 @@ public class Dosen
 
     public Dosen()
     {
+
     }
 
     public String getNip()
